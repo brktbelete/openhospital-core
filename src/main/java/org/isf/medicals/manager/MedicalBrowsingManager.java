@@ -161,7 +161,7 @@ public class MedicalBrowsingManager {
 	 * 		 Otherwise throws an OHServiceException
 	 * @throws OHServiceException 
 	 */
-	public boolean updateMedical(Medical medical) throws OHServiceException {
+	public Medical updateMedical(Medical medical) throws OHServiceException {
 		return updateMedical(medical, false);
 	}
 
@@ -173,7 +173,7 @@ public class MedicalBrowsingManager {
 	 * 		 Otherwise throws an OHServiceException
 	 * @throws OHServiceException 
 	 */
-	public boolean updateMedical(Medical medical, boolean ignoreSimilar) throws OHServiceException {
+	public Medical updateMedical(Medical medical, boolean ignoreSimilar) throws OHServiceException {
 		checkMedicalForUpdate(medical, ignoreSimilar);
         return ioOperations.updateMedical(medical);
 	}

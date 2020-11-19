@@ -291,15 +291,9 @@ public class MedicalsIoOperations
 	 * @return <code>true</code> if the medical has been updated <code>false</code> otherwise.
 	 * @throws OHServiceException if an error occurs during the update.
 	 */
-	public boolean updateMedical(Medical medical) throws OHServiceException 
+	public Medical updateMedical(Medical medical) throws OHServiceException
 	{
-		boolean result = true;
-		
-
-		Medical savedMedical = repository.save(medical);
-		result = (savedMedical != null);
-
-		return result;
+		 return repository.save(medical);
 	}
 
 	/**
